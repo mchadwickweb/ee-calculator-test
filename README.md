@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Once cloned run
+
+### `npm ci`
+
 ## Code for the Calculator
 
 All code and tests can be found in `/components`
