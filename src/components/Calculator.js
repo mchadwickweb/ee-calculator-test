@@ -30,12 +30,7 @@ const Calculator = () => {
 
   const updateCurrentOperand = (value) => {
     if (value === "." && currentOperand.includes(".")) return;
-
-    if (!currentOperand) {
-      setCurrentOperand(value);
-    } else {
-      setCurrentOperand(() => currentOperand.concat(value));
-    }
+    setCurrentOperand(() => currentOperand.toString().concat(value));
   };
 
   const updateOperation = (value) => {
@@ -60,8 +55,8 @@ const Calculator = () => {
       currentOperand,
       operation
     );
-    setCurrentOperand(calculatedValue);
-    setStoredOperand("");
+    setStoredOperand(calculatedValue);
+    setCurrentOperand("");
     setOperation("");
   };
 
@@ -92,18 +87,18 @@ const Calculator = () => {
               DEL
             </button>
 
-            <button onClick={() => updateCurrentOperand(1)}>1</button>
-            <button onClick={() => updateCurrentOperand(2)}>2</button>
-            <button onClick={() => updateCurrentOperand(3)}>3</button>
-            <button onClick={() => updateCurrentOperand(4)}>4</button>
-            <button onClick={() => updateCurrentOperand(5)}>5</button>
-            <button onClick={() => updateCurrentOperand(6)}>6</button>
-            <button onClick={() => updateCurrentOperand(7)}>7</button>
-            <button onClick={() => updateCurrentOperand(8)}>8</button>
-            <button onClick={() => updateCurrentOperand(9)}>9</button>
+            <button onClick={() => updateCurrentOperand("1")}>1</button>
+            <button onClick={() => updateCurrentOperand("2")}>2</button>
+            <button onClick={() => updateCurrentOperand("3")}>3</button>
+            <button onClick={() => updateCurrentOperand("4")}>4</button>
+            <button onClick={() => updateCurrentOperand("5")}>5</button>
+            <button onClick={() => updateCurrentOperand("6")}>6</button>
+            <button onClick={() => updateCurrentOperand("7")}>7</button>
+            <button onClick={() => updateCurrentOperand("8")}>8</button>
+            <button onClick={() => updateCurrentOperand("9")}>9</button>
             <button
               className="calc-grid-span-2"
-              onClick={() => updateCurrentOperand(0)}
+              onClick={() => updateCurrentOperand("0")}
             >
               0
             </button>
