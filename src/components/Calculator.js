@@ -55,8 +55,8 @@ const Calculator = () => {
       currentOperand,
       operation
     );
-    setStoredOperand(calculatedValue);
-    setCurrentOperand("");
+    setStoredOperand("");
+    setCurrentOperand(calculatedValue);
     setOperation("");
   };
 
