@@ -30,7 +30,12 @@ const Calculator = () => {
 
   const updateCurrentOperand = (value) => {
     if (value === "." && currentOperand.includes(".")) return;
-    setCurrentOperand(() => currentOperand.concat(value));
+
+    if (!currentOperand) {
+      setCurrentOperand(value);
+    } else {
+      setCurrentOperand(() => currentOperand.concat(value));
+    }
   };
 
   const updateOperation = (value) => {
