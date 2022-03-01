@@ -8,7 +8,7 @@ Once cloned run
 
 ## Code for the Calculator
 
-All code and tests can be found in `/components`
+All code and tests can be found in `/src/components`
 
 ## Available Scripts
 
